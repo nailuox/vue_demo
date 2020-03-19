@@ -2,7 +2,7 @@
 	<a-layout id="components-layout-demo-custom-trigger">
 		<a-layout-sider :trigger="null" collapsible v-model="collapsed">
 			<div class="logo" />
-      <!-- 菜单 -->
+			<!-- 菜单 -->
 			<a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']">
 				<a-menu-item key="1">
 					<router-link to="/">
@@ -11,7 +11,11 @@
 					</router-link>
 				</a-menu-item>
 				<a-sub-menu>
-					<span slot="title"><a-icon type="laptop" /><span v-if="!collapsed">组件演示</span></span>
+					<span slot="title"
+						><a-icon type="laptop" /><span v-if="!collapsed"
+							>组件演示</span
+						></span
+					>
 					<a-menu-item key="2">
 						<router-link to="/about">
 							<a-icon type="video-camera" />
@@ -22,15 +26,15 @@
 			</a-menu>
 		</a-layout-sider>
 		<a-layout>
-      <!-- 头部 -->
+			<!-- 头部 -->
 			<a-layout-header style="background: #fff; padding: 0">
 				<a-icon
 					class="trigger"
 					:type="collapsed ? 'menu-unfold' : 'menu-fold'"
-					@click="() => (collapsed = !collapsed)"
+					@click="changeCollapsed"
 				/>
 			</a-layout-header>
-      <!-- 内容 -->
+			<!-- 内容 -->
 			<a-layout-content
 				:style="{
 					margin: '24px 16px',
@@ -47,8 +51,11 @@
 
 <script>
 import { Layout, Menu, Icon } from 'ant-design-vue'
+import { createNamespacedHelpers } from 'vuex'
 
 const { Sider, Header, Content } = Layout
+const { mapState, mapActions } = createNamespacedHelpers('app')
+
 export default {
 	components: {
 		'a-layout': Layout,
@@ -60,10 +67,19 @@ export default {
 		'a-layout-content': Content,
 		'a-sub-menu': Menu.SubMenu
 	},
-	data() {
-		return {
-			collapsed: false
-		}
+	// data() {
+	// 	return {
+	// 		collapsed: false
+	// 	}
+	// },
+	computed: {
+		// 在 `app` 中查找
+		...mapState({
+			collapsed: state => state.collapsed
+		})
+	},
+	methods: {
+		...mapActions(['changeCollapsed'])
 	}
 }
 </script>
