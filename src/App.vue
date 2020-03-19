@@ -7,7 +7,7 @@
 				<a-menu-item key="1">
 					<router-link to="/">
 						<a-icon type="user" />
-						<span>Home</span>
+						<span>首页</span>
 					</router-link>
 				</a-menu-item>
 				<a-sub-menu>
