@@ -1,8 +1,11 @@
-import { CHANGE_COLLAPSED } from './mutation-types'
+import moment from 'moment'
+
+import { CHANGE_COLLAPSED, REFRESH_TIME } from './mutation-types'
 
 // initial state
 const state = {
-	collapsed: false
+	collapsed: false,
+	time: moment().format('YYYY-MM-DD HH:mm:ss')
 }
 
 // getters
@@ -15,6 +18,9 @@ const getters = {}
 const actions = {
 	changeCollapsed({ commit, state }) {
 		commit({ type: CHANGE_COLLAPSED, collapsed: !state.collapsed })
+	},
+	refreshTime({ commit }) {
+		commit({ type: REFRESH_TIME })
 	}
 }
 
@@ -22,6 +28,9 @@ const actions = {
 const mutations = {
 	[CHANGE_COLLAPSED](state, paylod) {
 		state.collapsed = paylod.collapsed
+	},
+	[REFRESH_TIME](state) {
+		state.time = moment().format('YYYY-MM-DD HH:mm:ss')
 	}
 }
 

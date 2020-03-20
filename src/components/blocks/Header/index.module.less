@@ -1,0 +1,46 @@
+.header {
+  background: linear-gradient(to right, #002140, #000c18) !important;
+  // box-shadow: 0px 5px 5px #001529;
+  padding: 0;
+  color: #fff;
+
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color .3s;
+
+    &:hover {
+      color: #1890ff;
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .usernameBox {
+    float: right;
+    margin-right: 16px;
+
+    >.ant-avatar {
+      background: #fff;
+      color: @primary-color;
+      margin-right: 8px;
+    }
+
+    >.anticon {
+      margin-left: 32px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+  }
+
+  .timeBox {
+    float: right;
+    font-size: 16px;
+    margin-right: 32px;
+  }
+}

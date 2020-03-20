@@ -123,7 +123,7 @@ export default {
 			fabric.Image.fromURL(photo, function(img) {
 				img.scale(0.3).set({
 					left: 200,
-					top: 200,
+					top: 200
 					// angle: -15
 					// clipTo: function(ctx) {
 					//   ctx.arc(0, 0, radius, 0, Math.PI * 2, true)

@@ -21,9 +21,13 @@
 
 <script>
 import { Layout } from 'ant-design-vue'
+import moment from 'moment'
+import 'moment/locale/zh-cn'
 
 import LeftSide from '@/components/blocks/LeftSide'
 import Header from '@/components/blocks/Header'
+
+moment.locale('zh-cn')
 
 export default {
 	components: {
@@ -39,7 +43,7 @@ export default {
 #components-layout-demo-custom-trigger {
 	height: 100%;
 }
-#components-layout-demo-custom-trigger .trigger {
+/* #components-layout-demo-custom-trigger .trigger {
 	font-size: 18px;
 	line-height: 64px;
 	padding: 0 24px;
@@ -55,5 +59,5 @@ export default {
 	height: 32px;
 	background: rgba(255, 255, 255, 0.2);
 	margin: 16px;
-}
+} */
 </style>
