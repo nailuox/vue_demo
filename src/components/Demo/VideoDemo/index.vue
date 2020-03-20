@@ -36,7 +36,7 @@ export default {
 	},
 	data() {
 		return {
-			breadcrumbList: ['Openlayers Demo'],
+			breadcrumbList: ['Video Demo'],
 			context: `<ul class="card-ul">
             <li>video.js是一款基于HTML5的网络视频播放器。它支持HTML5和Flash视频，以及YouTube和Vimeo（通过插件），支持在桌面和移动设备上播放视频。因为Video.js基于html5的，所以只有mp4，webm，ogv三种格式支持</li>
             <li>安装Video依赖， yarn add video.js</li>

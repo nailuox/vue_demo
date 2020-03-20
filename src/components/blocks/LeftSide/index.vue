@@ -31,6 +31,12 @@
 						<span>Video</span>
 					</router-link>
 				</a-menu-item>
+				<a-menu-item key="5">
+					<router-link to="/fabricDemo">
+						<a-icon type="highlight" />
+						<span>Fabric</span>
+					</router-link>
+				</a-menu-item>
 			</a-sub-menu>
 		</a-menu>
 	</a-layout-sider>
