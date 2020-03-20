@@ -10,7 +10,6 @@
 				:style="{
 					margin: '24px 16px',
 					padding: '10px 20px',
-					background: '#fff',
 					minHeight: '280px'
 				}"
 			>

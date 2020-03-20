@@ -13,9 +13,9 @@
 					><a-icon type="laptop" /><span v-if="!collapsed">组件演示</span></span
 				>
 				<a-menu-item key="2">
-					<router-link to="/about">
-						<a-icon type="video-camera" />
-						<span> About</span>
+					<router-link to="/echartsDemo">
+						<a-icon type="pie-chart" />
+						<span>ECharts</span>
 					</router-link>
 				</a-menu-item>
 			</a-sub-menu>
