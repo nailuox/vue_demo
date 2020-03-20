@@ -25,6 +25,12 @@
 						<span>Openlayers</span>
 					</router-link>
 				</a-menu-item>
+				<a-menu-item key="4">
+					<router-link to="/videoDemo">
+						<a-icon type="video-camera" />
+						<span>Video</span>
+					</router-link>
+				</a-menu-item>
 			</a-sub-menu>
 		</a-menu>
 	</a-layout-sider>

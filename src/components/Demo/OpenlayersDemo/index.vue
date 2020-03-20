@@ -192,7 +192,7 @@ export default {
 			//创建要素
 			let features = []
 			const _dataArray = require('./data.json')
-			window.console.log(_dataArray)
+			// window.console.log(_dataArray)
 			_dataArray.forEach(data => {
 				const _feature = new Feature({
 					geometry: new Point(

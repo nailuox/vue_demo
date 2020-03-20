@@ -1,19 +1,10 @@
-// module.exports = {
-// 	presets: ['@vue/cli-plugin-babel/preset'],
-// 	plugins: [
-// 		[
-// 			'import',
-// 			{ libraryName: 'ant-design-vue', libraryDirectory: 'es', style: 'css' }
-// 		]
-// 	]
-// }
-
+// antd样式按需加载
 module.exports = {
-  presets: ["@vue/app"],
-  plugins: [
-    [
-      "import",
-      { libraryName: "ant-design-vue", libraryDirectory: "es", style: true }
-    ]
-  ]
+	presets: ['@vue/app'],
+	plugins: [
+		[
+			'import',
+			{ libraryName: 'ant-design-vue', libraryDirectory: 'es', style: true }
+		]
+	]
 }

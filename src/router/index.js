@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Dashboard from '../components/Dashboard'
 import OpenlayersDemo from '../components/Demo/OpenlayersDemo'
+import VideoDemo from '../components/Demo/VideoDemo'
 
 Vue.use(VueRouter)
 
@@ -22,6 +24,10 @@ const routes = [
 	{
 		path: '/openlayersDemo',
 		component: OpenlayersDemo
+	},
+	{
+		path: '/videoDemo',
+		component: VideoDemo
 	},
 	{
 		path: '*',
