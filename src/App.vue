@@ -1,39 +1,10 @@
 <template>
 	<a-layout id="components-layout-demo-custom-trigger">
-		<a-layout-sider :trigger="null" collapsible v-model="collapsed">
-			<div class="logo" />
-			<!-- 菜单 -->
-			<a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']">
-				<a-menu-item key="1">
-					<router-link to="/">
-						<a-icon type="user" />
-						<span>首页</span>
-					</router-link>
-				</a-menu-item>
-				<a-sub-menu>
-					<span slot="title"
-						><a-icon type="laptop" /><span v-if="!collapsed"
-							>组件演示</span
-						></span
-					>
-					<a-menu-item key="2">
-						<router-link to="/about">
-							<a-icon type="video-camera" />
-							<span> About</span>
-						</router-link>
-					</a-menu-item>
-				</a-sub-menu>
-			</a-menu>
-		</a-layout-sider>
+		<!-- 菜单 -->
+		<LeftSide />
 		<a-layout>
 			<!-- 头部 -->
-			<a-layout-header style="background: #fff; padding: 0">
-				<a-icon
-					class="trigger"
-					:type="collapsed ? 'menu-unfold' : 'menu-fold'"
-					@click="changeCollapsed"
-				/>
-			</a-layout-header>
+			<Header />
 			<!-- 内容 -->
 			<a-layout-content
 				:style="{
@@ -50,36 +21,17 @@
 </template>
 
 <script>
-import { Layout, Menu, Icon } from 'ant-design-vue'
-import { createNamespacedHelpers } from 'vuex'
+import { Layout } from 'ant-design-vue'
 
-const { Sider, Header, Content } = Layout
-const { mapState, mapActions } = createNamespacedHelpers('app')
+import LeftSide from '@/components/blocks/LeftSide'
+import Header from '@/components/blocks/Header'
 
 export default {
 	components: {
 		'a-layout': Layout,
-		'a-layout-sider': Sider,
-		'a-menu': Menu,
-		'a-menu-item': Menu.Item,
-		'a-icon': Icon,
-		'a-layout-header': Header,
-		'a-layout-content': Content,
-		'a-sub-menu': Menu.SubMenu
-	},
-	// data() {
-	// 	return {
-	// 		collapsed: false
-	// 	}
-	// },
-	computed: {
-		// 在 `app` 中查找
-		...mapState({
-			collapsed: state => state.collapsed
-		})
-	},
-	methods: {
-		...mapActions(['changeCollapsed'])
+		'a-layout-content': Layout.Content,
+		LeftSide,
+		Header
 	}
 }
 </script>
