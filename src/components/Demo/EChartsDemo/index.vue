@@ -55,8 +55,8 @@ export default {
 		'a-col': Col
 	},
 	mounted() {
-    this.initColumnEcharts()
-    this.initStack()
+		this.initColumnEcharts()
+		this.initStack()
 	},
 	data() {
 		return {
@@ -92,7 +92,6 @@ export default {
 					}
 				]
 			})
-			window.console.log(myChart, this.$refs.column)
 			window.addEventListener('resize', function() {
 				myChart.resize()
 			})
@@ -190,7 +189,9 @@ export default {
 				]
 			}
 			myChart.setOption(option)
-			myChart.resize()
+			window.addEventListener('resize', function() {
+				myChart.resize()
+			})
 		}
 	}
 }

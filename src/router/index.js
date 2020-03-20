@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Dashboard from '../components/Dashboard'
+import OpenlayersDemo from '../components/Demo/OpenlayersDemo'
 
 Vue.use(VueRouter)
 
@@ -19,6 +20,10 @@ const routes = [
 		component: () => import('../components/Demo/EChartsDemo')
 	},
 	{
+		path: '/openlayersDemo',
+		component: OpenlayersDemo
+	},
+	{
 		path: '*',
 		name: 'Dashboard',
 		component: Dashboard
@@ -26,6 +31,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
 	routes
 })
 
