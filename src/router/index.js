@@ -5,6 +5,8 @@ import Dashboard from '../components/Dashboard'
 import OpenlayersDemo from '../components/Demo/OpenlayersDemo'
 import VideoDemo from '../components/Demo/VideoDemo'
 import FabricDemo from '../components/Demo/FabricDemo'
+import FortAwesomeDemo from '../components/Demo/FortAwesomeDemo'
+import AxiosDemo from '../components/Demo/AxiosDemo'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,14 @@ const routes = [
 	{
 		path: '/fabricDemo',
 		component: FabricDemo
+	},
+	{
+		path: '/fortAwesomeDemo',
+		component: FortAwesomeDemo
+	},
+	{
+		path: '/axiosDemo',
+		component: AxiosDemo
 	},
 	{
 		path: '*',

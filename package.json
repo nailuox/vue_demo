@@ -10,9 +10,11 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "ant-design-vue": "^1.4.12",
+    "axios": "^0.19.2",
     "babel-plugin-import": "^1.13.0",
     "core-js": "^3.6.4",
     "echarts": "^4.7.0",
+    "fabric": "3.1.0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "ol": "^6.2.1",

@@ -26,7 +26,7 @@ export default {
 			this.$refs.videoNode,
 			this.videoJsOptions,
 			function onPlayerReady() {
-				console.log('onPlayerReady', this)
+				window.console.log('onPlayerReady', this)
 			}
 		)
 	},

@@ -37,6 +37,18 @@
 						<span>Fabric</span>
 					</router-link>
 				</a-menu-item>
+				<a-menu-item key="6">
+					<router-link to="/fortAwesomeDemo">
+						<a-icon type="font-colors" />
+						<span>FortAwesome</span>
+					</router-link>
+				</a-menu-item>
+				<a-menu-item key="7">
+					<router-link to="/axiosDemo">
+						<a-icon type="api" />
+						<span>Axios</span>
+					</router-link>
+				</a-menu-item>
 			</a-sub-menu>
 		</a-menu>
 	</a-layout-sider>
