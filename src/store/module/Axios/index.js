@@ -5,7 +5,7 @@ import Axios from '@/common/Axios'
 
 // initial state
 const state = {
-	data: []
+	data: { subjects: [] }
 }
 
 // getters
@@ -17,9 +17,9 @@ const getters = {}
 // 异步逻辑都应该封装到 action 里面
 const actions = {
 	async getData({ commit }) {
-		let data = []
+		let data = {}
 		try {
-			const res = await Axios.get('/api/axios.json')
+			const res = await Axios.get('/data.json')
 			data = res.data ? res.data : []
 		} catch (e) {
 			message.error('请求数据出错：' + e)
@@ -39,8 +39,8 @@ const mutations = {
 		state.data = paylod.data
 	},
 	[AXIOS_DELETE_DATA](state, paylod) {
-		const newData = state.data.filter(x => x.id !== paylod.id)
-		state.data = [...newData]
+		const newData = state.data.subjects.filter(x => x.id !== paylod.id)
+		state.data.subjects = [...newData]
 	}
 }
 

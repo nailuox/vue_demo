@@ -4,17 +4,25 @@
 		<TypingCard :content="context" id="howUse" title="使用说明" />
 		<a-row :gutter="20">
 			<a-col :span="24">
-				<a-card title="表格 - template 风格写法">
-					<a-table :dataSource="data" bordered rowKey="id">
-						<a-column dataIndex="id" title="id">
-							<template slot-scope="id">
-								{{ id }}
+				<a-card :title="'表格 - template 风格写法' + data.title">
+					<a-table
+						:dataSource="data.subjects"
+						bordered
+						rowKey="id"
+						:pagination="false"
+					>
+						<a-column dataIndex="title" title="电影名称" />
+						<a-column dataIndex="genres" title="电影类型">
+							<template slot-scope="genres">
+								{{ genres.map(x => x) }}
 							</template>
 						</a-column>
-						<a-column dataIndex="username" title="姓名" />
-						<a-column dataIndex="sex" title="性别" />
-						<a-column dataIndex="age" title="年龄" />
-						<a-column dataIndex="hobby" title="爱好" />
+						<a-column dataIndex="directors" title="主演">
+							<template slot-scope="directors">
+								{{ directors.map(x => x.name) }}
+							</template>
+						</a-column>
+						<a-column dataIndex="mainland_pubdate" title="公映时间" />
 						<a-column dataIndex="" title="操作">
 							<template slot-scope="text, record">
 								<span>
