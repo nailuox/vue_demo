@@ -10,6 +10,7 @@
 						bordered
 						rowKey="id"
 						:pagination="false"
+						:loading="loading"
 					>
 						<a-column dataIndex="title" title="电影名称" />
 						<a-column dataIndex="genres" title="电影类型">
@@ -76,7 +77,9 @@ export default {
 		'a-button': Button
 	},
 	mounted() {
-		this.getData()
+		this.getData().then(() => {
+			this.loading = false
+		})
 	},
 	data() {
 		return {
@@ -85,7 +88,8 @@ export default {
             <li>安装Axios依赖， yarn add axios</li>
             <li>以下数据来自Axios调用获取</li>
             <li>具体使用参见<a href="https://www.kancloud.cn/yunye/axios/234845" target="#">Axios官网</a></li>
-        </ul>`
+				</ul>`,
+			loading: true
 		}
 	},
 	computed: {
