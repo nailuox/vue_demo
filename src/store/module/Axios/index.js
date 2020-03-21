@@ -18,8 +18,12 @@ const getters = {}
 const actions = {
 	async getData({ commit }) {
 		let data = {}
+		const url =
+			process.env.NODE_ENV === 'production'
+				? '/vue_demo/docs/api/axios.json'
+				: '/api/axios.json'
 		try {
-			const res = await Axios.get('/api/axios.json')
+			const res = await Axios.get(url)
 			data = res.data ? res.data : []
 		} catch (e) {
 			message.error('请求数据出错：' + e)
