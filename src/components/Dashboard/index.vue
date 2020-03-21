@@ -20,7 +20,9 @@ export default {
 			context: `<ul class="card-ul">
             <li>该系统用于演示vue项目</li>
             <li>使用vue ui脚手架生成, UI使用 Antd Design Vue, 使用Yarn管理依赖</li>
-						<li>项目使用技术栈为：<a href='https://cn.vuejs.org/' target="#">vue</a> + 
+						<li>项目使用技术栈为：
+							<a href='https://cli.vuejs.org/zh/' target="#">vue cli</a> + 
+							<a href='https://cn.vuejs.org/' target="#">vue</a> + 
 							<a href='https://router.vuejs.org/zh/' target="#">vue router</a> + 
 							<a href='https://vuex.vuejs.org/zh/' target="#">vuex</a> + less</li>
             <li>

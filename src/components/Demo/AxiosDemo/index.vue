@@ -26,7 +26,7 @@
 						<a-column dataIndex="" title="操作">
 							<template slot-scope="text, record">
 								<span>
-									<a-button>Action 一 {{ record.username }}</a-button>
+									<!-- <a-button>Action 一 {{ record.title }}</a-button> -->
 									<a-divider type="vertical" />
 									<a-popconfirm
 										title="确认删除?"
@@ -94,6 +94,7 @@ export default {
 		})
 	},
 	methods: {
+		// 将 `this.getData()` 映射为 `this.$store.dispatch('getData')`
 		...mapActions(['getData', 'handleDelete'])
 	}
 }
