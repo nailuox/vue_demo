@@ -20,7 +20,7 @@ const actions = {
 		let data = {}
 		const url =
 			process.env.NODE_ENV === 'production'
-				? '/vue_demo/docs/api/axios.json'
+				? '/vue_demo/api/axios.json'
 				: '/api/axios.json'
 		try {
 			const res = await Axios.get(url)
