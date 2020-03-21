@@ -46,8 +46,8 @@ Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用�
 
 这个状态自管理应用包含以下几个部分：
 
- state，驱动应用的数据源；
- view，以声明方式将 state 映射到视图；
- actions，响应在 view 上的用户输入导致的状态变化。
+ state，驱动应用的数据源；  
+ view，以声明方式将 state 映射到视图；  
+ actions，响应在 view 上的用户输入导致的状态变化。  
 
 ![](https://raw.githubusercontent.com/nailuox/vue_demo/master/screenshot/vuex.png)
