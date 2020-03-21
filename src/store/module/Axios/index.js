@@ -19,7 +19,7 @@ const actions = {
 	async getData({ commit }) {
 		let data = {}
 		try {
-			const res = await Axios.get('/data.json')
+			const res = await Axios.get('/api/axios.json')
 			data = res.data ? res.data : []
 		} catch (e) {
 			message.error('请求数据出错：' + e)
