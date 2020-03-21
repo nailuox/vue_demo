@@ -13,7 +13,9 @@
 					minHeight: '280px'
 				}"
 			>
-				<router-view></router-view>
+				<transition name="fade" mode="out-in">
+					<router-view class="view"></router-view>
+				</transition>
 			</a-layout-content>
 		</a-layout>
 	</a-layout>

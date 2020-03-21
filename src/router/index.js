@@ -7,6 +7,7 @@ import VideoDemo from '../components/Demo/VideoDemo'
 import FabricDemo from '../components/Demo/FabricDemo'
 import FortAwesomeDemo from '../components/Demo/FortAwesomeDemo'
 import AxiosDemo from '../components/Demo/AxiosDemo'
+import EChartsDemo from '../components/Demo/EChartsDemo'
 
 Vue.use(VueRouter)
 
@@ -22,7 +23,8 @@ const routes = [
 		// route level code-splitting
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
-		component: () => import('../components/Demo/EChartsDemo')
+		// component: () => import('../components/Demo/EChartsDemo')
+		component: EChartsDemo
 	},
 	{
 		path: '/openlayersDemo',
@@ -52,7 +54,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  // mode: 'hash',
+	// mode: 'hash',
 	routes
 })
 
