@@ -90,17 +90,16 @@ export default {
 			// console.log(this.ws)
 			const data = require('./data.json')
 			this.ws.onopen = () => {
-				window.console.log('Connection open ...')
+				console.log('Connection open ...')
 				this.ws.send(JSON.stringify(data))
 			}
 			this.ws.onmessage = data => {
-				window.console.log()
 				const usersString = data.data.substr(0, data.data.indexOf(']') + 1)
 				const users = JSON.parse(usersString)
 				this.loading = false
 				this.users = users
         this.ws.close()
-        window.console.log('Connection close ...')
+        console.log('Connection close ...')
 			}
 		}
 	}

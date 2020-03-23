@@ -11,7 +11,6 @@ axios.interceptors.request.use(
 		if (process.env.NODE_ENV === 'production') {
       config.url = '/vue_demo' + config.url
 		}
-		// window.console.log(process.env.NODE_ENV, '/vue_demo' + config.url)
 		return config
 	},
 	error => {
