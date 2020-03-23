@@ -49,6 +49,12 @@
 						<span>Axios</span>
 					</router-link>
 				</a-menu-item>
+				<a-menu-item key="8">
+					<router-link to="/websocketDemo">
+						<a-icon type="message" />
+						<span>WebsocketDemo</span>
+					</router-link>
+				</a-menu-item>
 			</a-sub-menu>
 		</a-menu>
 	</a-layout-sider>
@@ -65,8 +71,8 @@ export default {
 		'a-layout-sider': Sider,
 		'a-menu': Menu,
 		'a-menu-item': Menu.Item,
-		'a-icon': Icon,
-		'a-sub-menu': Menu.SubMenu
+		'a-sub-menu': Menu.SubMenu,
+		'a-icon': Icon
 	},
 	computed: {
 		...mapState({

@@ -8,6 +8,7 @@ import FabricDemo from '../components/Demo/FabricDemo'
 import FortAwesomeDemo from '../components/Demo/FortAwesomeDemo'
 import AxiosDemo from '../components/Demo/AxiosDemo'
 import EChartsDemo from '../components/Demo/EChartsDemo'
+import WebsocketDemo from '../components/Demo/WebsocketDemo'
 
 Vue.use(VueRouter)
 
@@ -47,8 +48,11 @@ const routes = [
 		component: AxiosDemo
 	},
 	{
+		path: '/websocketDemo',
+		component: WebsocketDemo
+	},
+	{
 		path: '*',
-		name: 'Dashboard',
 		component: Dashboard
 	}
 ]

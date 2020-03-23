@@ -4,7 +4,7 @@
 		<TypingCard :content="context" id="howUse" title="使用说明" />
 		<a-row :gutter="20">
 			<a-col :span="24">
-				<a-card :title="'表格 - template 风格写法' + data.title">
+				<a-card :title="'表格 - template 风格写法 >>>>>>>>>>>>>>> ' + data.title">
 					<a-table
 						:dataSource="data.subjects"
 						bordered
