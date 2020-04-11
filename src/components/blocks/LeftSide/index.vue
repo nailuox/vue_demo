@@ -55,6 +55,12 @@
 						<span>WebsocketDemo</span>
 					</router-link>
 				</a-menu-item>
+				<a-menu-item key="9">
+					<router-link to="/qrcodeJsDemo">
+						<i class="fa fa-qrcode menuIcon" aria-hidden="true"></i>
+						<span>QRcodeJsDemo</span>
+					</router-link>
+				</a-menu-item>
 			</a-sub-menu>
 		</a-menu>
 	</a-layout-sider>
@@ -82,4 +88,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="less" scoped>
+.menuIcon{
+	margin-right: 10px;
+}
+</style>

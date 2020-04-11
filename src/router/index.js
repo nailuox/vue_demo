@@ -9,6 +9,7 @@ import FortAwesomeDemo from '../components/Demo/FortAwesomeDemo'
 import AxiosDemo from '../components/Demo/AxiosDemo'
 import EChartsDemo from '../components/Demo/EChartsDemo'
 import WebsocketDemo from '../components/Demo/WebsocketDemo'
+import QRCodeJsDemo from '../components/Demo/QRCodeJsDemo'
 
 Vue.use(VueRouter)
 
@@ -50,6 +51,10 @@ const routes = [
 	{
 		path: '/websocketDemo',
 		component: WebsocketDemo
+	},
+	{
+		path: '/qrcodeJsDemo',
+		component: QRCodeJsDemo
 	},
 	{
 		path: '*',

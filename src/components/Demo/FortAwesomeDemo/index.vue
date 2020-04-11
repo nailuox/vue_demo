@@ -18,7 +18,7 @@
 							<i class="fa fa-home fa-fw" :aria-hidden="true" />
 							&nbsp; 首页
 						</a>
-						<a class="listGroupItem" href="http://www.fontawesome.com.cn/">
+						<a class="listGroupItem" href="http://www.fontawesome.com.cn/" target="#">
 							<i class="fa fa-book fa-fw" :aria-hidden="true" />
 							&nbsp; 关于我们
 						</a>

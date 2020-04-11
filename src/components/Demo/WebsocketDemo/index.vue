@@ -78,7 +78,8 @@ export default {
 				'ws://123.207.136.134:9010/ajaxchattest',
 				null,
 				{ debug: true, reconnectInterval: 30000 }
-			)
+      )
+      // 由于websocket 的异常是异步的, 使用try...catch 捕获不到
 			this.ws.onerror = () => {
 				this.ws.close()
 				message.error('websocket连接出错!')
@@ -87,7 +88,6 @@ export default {
 				}, 2000)
 			}
 
-			// console.log(this.ws)
 			const data = require('./data.json')
 			this.ws.onopen = () => {
 				console.log('Connection open ...')
