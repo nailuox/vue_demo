@@ -2,7 +2,7 @@
 
 ## 技术栈：
 
-@vue/cli + vue4.0 + vue router + vuex + less
+@vue/cli + vue + vue router + vuex + less
 
 ## 运行项目（nodejs 6.0+）
 
